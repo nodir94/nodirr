@@ -1,0 +1,100 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body takes full screen height */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Main content stretches to fill space */
+.main-content {
+    flex: 1; /* Allows the main content to fill remaining space */
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Posts section */
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual post */
+.post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Images inside posts are responsive */
+.post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .header, .footer {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .posts {
+        flex-direction: column; /* Postlarni ustma-ust joylashtirish */
+        align-items: center;    /* Postlarni markazga joylash */
+    }
+
+    .post {
+        width: 90%; /* Har bir post kengligi ekranning 90% bo‘lsin */
+    }
+
+    .main-content {
+        padding: 10px; /* Kichikroq bo‘lsin */
+    }
+}
+
+@media (max-width: 480px) {
+    .header, .footer {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .post {
+        width: 100%; /* Post kengligi to‘liq ekran bo‘lsin */
+    }
+
+    body {
+        font-size: 14px; /* Matn kichikroq bo‘lsin */
+    }
+}
+
+
